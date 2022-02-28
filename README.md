@@ -2,6 +2,8 @@
 Simple currency converter made in [Flutter](https://flutter.dev)
 
 # Installation
+Setup your .env file with apikey provided by [Free currencyapi][https://freecurrencyapi.net/]
+
 ```bash
 $ flutter pub get
 ```

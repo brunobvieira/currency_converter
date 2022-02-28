@@ -1,9 +1,9 @@
-import 'package:currency_converter/src/pages/currency_converter.page.dart';
+import 'package:currency_converter/src/pages/currency_converter_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-Future<void> main() async {
-  await dotenv.load(fileName: ".env");
+Future main() async {
+  await dotenv.load();
   runApp(App());
 }
 

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:currency_converter/src/models/Currency.model.dart';
+import 'package:currency_converter/src/models/currency_model.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
@@ -21,7 +21,9 @@ class FreeCurrencyApiService {
   }
 
   Future<Currency> fetchExchangeRates(String baseCurrency) async {
-    var queryParams = Uri(queryParameters: {'apiKey': apiKey}).query;
+    var queryParams =
+        Uri(queryParameters: {'apikey': apiKey, 'base_currency': baseCurrency})
+            .query;
     var url = Uri.parse('$apiUrl?$queryParams');
 
     final response = await http.get(url, headers: headers);
